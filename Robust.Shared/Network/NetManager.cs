@@ -885,13 +885,12 @@ namespace Robust.Shared.Network
         /// <param name="netChannel"></param>
         /// <param name="newData"></param>
         /// <exception cref="Exception"></exception> <summary>
-        public void ReSetupChannel(INetChannel netChannel, NetUserData newData, LoginType authType)
+        public void ReSetupChannel(INetChannel netChannel, NetUserData newData)
         {
             if (netChannel is not NetChannel channel)
                 throw new Exception("NetManager got INetChannel not belonging to it");
 
             channel.UserData = newData;
-            channel.AuthType = authType;
         }
 
         private void HandleDisconnect(NetPeerData peer, NetConnection connection, string reason)
