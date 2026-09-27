@@ -45,7 +45,7 @@ namespace Robust.Shared.Network
             public NetConnection Connection => _connection;
 
             [ViewVariables] public NetUserId UserId => UserData.UserId;
-            [ViewVariables] public NetUserData UserData { get; set; } // SS220
+            [ViewVariables] public NetUserData UserData { get; }
 
             public bool IsHandshakeComplete { get; set; }
 
